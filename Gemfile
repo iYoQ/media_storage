@@ -45,11 +45,14 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem "rubocop"
+  gem "rubocop-rails", "~> 2.24"
+  gem "letter_opener"
 end
 
 group :development do
@@ -68,3 +71,13 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "slim-rails", "~> 3.6"
+
+gem "devise", "~> 4.9"
+
+gem "has_scope", "~> 0.8.2"
+
+gem "paranoia", "~> 2.6"
+
+gem "ruby-vips", "~> 2.2"
