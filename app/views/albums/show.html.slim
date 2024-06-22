@@ -1,0 +1,3 @@
+div 
+  - @songs.each do |song|
+    = audio_tag song.song_file, controls: true

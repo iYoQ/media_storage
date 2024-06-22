@@ -1,0 +1,17 @@
+
+div.flex.flex-col
+  = form_with model: [:band, @album], class: "flex flex-col" do |form|
+    - if form.object.errors.any?
+    div
+      - form.object.errors.to_a.each do |message|
+        .notice.text-center.alert.alert-dark
+          = message
+
+    = form.label :title
+    = form.text_field :title
+
+    = form.fields_for :songs do |song_form|
+      = song_form.label :song_file
+      = song_form.file_field :song_file
+
+    = form.button 
